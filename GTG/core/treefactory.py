@@ -173,8 +173,7 @@ class TreeFactory():
             # without startdate
             return True
         elif days_left == 0:
-            # Don't count today's tasks started until morning
-            return datetime.now().hour > 4
+            return True
         else:
             return days_left < 0
 
